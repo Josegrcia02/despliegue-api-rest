@@ -12,7 +12,7 @@ public class Controllerpets {
     public Controllerpets(PetRepository petRepository){
         this.petRepository = petRepository;
     }
-    @GetMapping
+    @GetMapping ("/Pets")
     public List<Pet> ListadoPets(){
         return petRepository.findAll();
     }
