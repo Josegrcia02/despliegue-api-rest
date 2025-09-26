@@ -24,6 +24,7 @@ $pets = json_decode($data, true);
                 <td>CHIP</td>
                 <td>CATEGORY</td>
                 <td>BORN</td>
+                <td>ADOPT</td>
             </tr>
         </th>
         <tbody>
@@ -36,6 +37,7 @@ $pets = json_decode($data, true);
                         <td><?= $pet['chip'] ?></td>
                         <td><?= $pet['category'] ?></td>
                         <td><?= $pet['born'] ?></td>
+                        <td><?= $pet['adopt'] ?></td>
                     </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>
