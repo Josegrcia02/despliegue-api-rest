@@ -37,7 +37,7 @@ $pets = json_decode($data, true);
                         <td><?= $pet['chip'] ?></td>
                         <td><?= $pet['category'] ?></td>
                         <td><?= $pet['born'] ?></td>
-                        <td><?= $pet['adopt'] ?></td>
+                        <td><?= $pet['adopt'] ?><button>Adoptado</button></td>
                     </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>
