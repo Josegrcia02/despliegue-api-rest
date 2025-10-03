@@ -13,6 +13,7 @@ $pets = json_decode($data, true);
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
 </head>
 <body>
     <h1>Listado de Mascotas</h1>
@@ -24,6 +25,7 @@ $pets = json_decode($data, true);
                 <td>CHIP</td>
                 <td>CATEGORY</td>
                 <td>BORN</td>
+                <td>ADOPT</td>
             </tr>
         </th>
         <tbody>
@@ -36,6 +38,13 @@ $pets = json_decode($data, true);
                         <td><?= $pet['chip'] ?></td>
                         <td><?= $pet['category'] ?></td>
                         <td><?= $pet['born'] ?></td>
+                        <td>
+                            <?php if(!$pet['adopt']): ?>
+                                <button type="button" class="btn btn-success" onclick="adoptPet(<?= $pet['id'] ?>)">Adoptar</button>
+                            <?php else: ?>
+                                ✅ Adoptado
+                            <?php endif; ?>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>
