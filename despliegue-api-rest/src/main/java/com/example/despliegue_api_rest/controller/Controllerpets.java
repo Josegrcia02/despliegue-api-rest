@@ -34,7 +34,7 @@ public class Controllerpets {
 
     /**
      * Este método devuelve el listado de pets
-     * @return List<Pet> información de cada mascota
+     * @return {@link Pet} información de cada mascota
      */
     @GetMapping ("/list")
     public List<Pet> ListadoPets(){
